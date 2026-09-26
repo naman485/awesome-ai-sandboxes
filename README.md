@@ -198,6 +198,25 @@ In-JVM bash sandbox for AI agents: a POSIX-style bash with 160+ commands re-impl
 - **License:** MIT
 - **Pricing:** Free and open source
 
+---
+
+### [Minimal](https://minimal.dev)
+[Website](https://minimal.dev) | [Docs](https://docs.minimal.dev) | [GitHub](https://github.com/gominimal/minimal)
+
+Open-source CLI for sandboxed dev environments and AI coding agents. Sessions run in libkrun microVMs on macOS and namespace isolation on Linux.
+
+- **Isolation:** libkrun microVM on Apple's Hypervisor.framework (macOS, Apple Silicon); unprivileged user namespaces, kernel 5.10+ (Linux, x86_64/aarch64)
+- **Key features:** Declarative `minimal.toml` environments, durable sessions tied to git worktree context, agent shell where agents "cannot install arbitrary software, read unrelated files, or modify your system", loadouts for per-user tooling, cleanroom package builds with no host sharing, SLSA Build L3 provenance and CycloneDX v1.5 SBOMs, public package registry
+- **Cold start:** Not specified
+- **Max session:** Not specified — sessions keep running when detached and survive a provider restart until destroyed
+- **Snapshots / Forking:** Not specified
+- **Stateful:** Yes — session records and workspaces persist across detach/attach
+- **GPU:** Not specified
+- **BYOC / Self-host:** Yes (local-first, runs on your own machine)
+- **SDKs:** CLI-first (`min`, `minimal`), plus an MCP server and a GitHub Action (`gominimal/run-task`) for integrations
+- **License:** Apache 2.0
+- **Pricing:** Free and open source (v0.5.4 public beta); "Minimal for Teams" listed as coming soon
+
 ## Closed Source
 
 ### [Baponi](https://baponi.ai)
