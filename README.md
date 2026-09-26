@@ -198,6 +198,25 @@ In-JVM bash sandbox for AI agents: a POSIX-style bash with 160+ commands re-impl
 - **License:** MIT
 - **Pricing:** Free and open source
 
+---
+
+### [Minimal](https://minimal.dev)
+[Website](https://minimal.dev) | [Docs](https://docs.minimal.dev) | [GitHub](https://github.com/gominimal/minimal)
+
+Open-source CLI for sandboxed dev environments and AI coding agents. Sessions run in libkrun microVMs on macOS and namespace isolation on Linux.
+
+- **Isolation:** libkrun microVM on Apple's Hypervisor.framework (macOS, Apple Silicon); unprivileged user namespaces, kernel 5.10+ (Linux, x86_64/aarch64)
+- **Key features:** Declarative `minimal.toml` environments, durable sessions tied to git worktree context, agent shell where agents "cannot install arbitrary software, read unrelated files, or modify your system", loadouts for per-user tooling, cleanroom package builds with no host sharing, SLSA Build L3 provenance and CycloneDX v1.5 SBOMs, public package registry
+- **Cold start:** Not specified
+- **Max session:** Not specified — sessions keep running when detached and survive a provider restart until destroyed
+- **Snapshots / Forking:** Not specified
+- **Stateful:** Yes — session records and workspaces persist across detach/attach
+- **GPU:** Not specified
+- **BYOC / Self-host:** Yes (local-first, runs on your own machine)
+- **SDKs:** CLI-first (`min`, `minimal`), plus an MCP server and a GitHub Action (`gominimal/run-task`) for integrations
+- **License:** Apache 2.0
+- **Pricing:** Free and open source (v0.5.4 public beta); "Minimal for Teams" listed as coming soon
+
 ## Closed Source
 
 ### [Baponi](https://baponi.ai)
@@ -536,6 +555,20 @@ Firecracker microVM sandboxes for agents and untrusted code, with pause, resume 
 - **SDKs:** TypeScript (`@nodeops-createos/sandbox`, MIT), CLI (`createos`), MCP, REST API
 - **License:** Proprietary (SDK and CLI MIT)
 - **Pricing:** 500 free credits on signup; pay-as-you-go billed per second at $0.0504/vCPU-hr and $0.0162/GiB-hr, no egress fees, no charge while paused
+### [Runtime](https://withruntime.com)
+[Website](https://withruntime.com) | [Docs](https://withruntime.com/docs) | [GitHub](https://github.com/withruntime/runtime)
+
+Linux sandboxes for AI agents, each a Firecracker microVM with its own kernel, created from an SDK call, a CLI or an MCP server.
+
+- **Isolation:** Firecracker microVM
+- **Key features:** Pause and wake keeping memory and processes, snapshots and forks, egress proxy with allow and deny lists, secrets injected per host, private preview URLs, volumes with daily backups, MCP server, E2B SDK compatibility
+- **Cold start:** 243 ms median to running
+- **Max session:** Unlimited (lease extended, or `persistent: true`)
+- **Snapshots / Forking:** Yes (snapshot + fork)
+- **Stateful:** Yes (with volumes)
+- **GPU:** No
+- **BYOC / Self-host:** No
+- **SDKs:** TypeScript (`withruntime`), Python (`withruntime`), Go, Java, Ruby
 
 ---
 
