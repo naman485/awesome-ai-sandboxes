@@ -520,6 +520,23 @@ Disposable, hardware-isolated Linux VMs for AI coding agents, with warm-start se
 
 ---
 
+### [Runtime](https://withruntime.com)
+[Website](https://withruntime.com) | [Docs](https://withruntime.com/docs) | [GitHub](https://github.com/withruntime/runtime)
+
+Linux sandboxes for AI agents, each a Firecracker microVM with its own kernel, created from an SDK call, a CLI or an MCP server.
+
+- **Isolation:** Firecracker microVM
+- **Key features:** Pause and wake keeping memory and processes, snapshots and forks, egress proxy with allow and deny lists, secrets injected per host, private preview URLs, volumes with daily backups, MCP server, E2B SDK compatibility
+- **Cold start:** 243 ms median to running
+- **Max session:** Unlimited (lease extended, or `persistent: true`)
+- **Snapshots / Forking:** Yes (snapshot + fork)
+- **Stateful:** Yes (with volumes)
+- **GPU:** No
+- **BYOC / Self-host:** No
+- **SDKs:** TypeScript (`withruntime`), Python (`withruntime`), Go, Java, Ruby
+
+---
+
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for the entry template and source policy.
